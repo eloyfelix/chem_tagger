@@ -16,7 +16,7 @@ or download the pre-calculated dictionary from [here](https://ftp.ebi.ac.uk/pub/
 
 ## Quick test with ChEMBL synonyms
 
-Takes 0.4 seconds to tag 260000 synonyms from ChEMBL
+Loading the dictionary takes ~2minutes. Once it is loaded it takes 0.4 seconds to tag 260000 synonyms from ChEMBL.
 
 ```python
 import pydawg
