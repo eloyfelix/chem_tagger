@@ -1,16 +1,22 @@
 # Simple chemical tagger with PubChem synonyms and pyDAWG
 
-Download PubChem synonyms from ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Extras/CID-Synonym-filtered.gz and install [pyDAWG](https://github.com/WojciechMula/pyDAWG)
+Install [pyDAWG](https://github.com/WojciechMula/pyDAWG) and pandas
 
 - pip install https://github.com/WojciechMula/pyDAWG/archive/master.zip
+- pip install pandas
 
-It needs a C compiler since it builds a Python C extension
+It needs a C compiler since pyDAWG builds a Python C extension
 
-## Create dictionary of synonyms
+## Dictionary of synonyms
 
-run gen_file.py (or download the pre-calculated dict from [here](https://ftp.ebi.ac.uk/pub/databases/chembl/other/chem_dict.gz))
+Download Download PubChem synonyms (ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/Extras/CID-Synonym-filtered.gz) and run [gen_file.py](https://github.com/eloyfelix/chem_tagger/blob/main/gen_file.py)
+
+
+or download the pre-calculated dictionary from [here](https://ftp.ebi.ac.uk/pub/databases/chembl/other/chem_dict.gz)
 
 ## Quick test with ChEMBL synonyms
+
+Takes 0.4 seconds to tag 260000 synonyms from ChEMBL
 
 ```python
 import pydawg
